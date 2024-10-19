@@ -21,9 +21,16 @@
 </head>
 
 <body>
-
     <canvas id="heart" width="1920" height="947"></canvas>
     <script>
+        var audio = document.createElement("AUDIO")
+        document.body.appendChild(audio);
+        audio.src = "./laudaitinhai.mp3"
+
+        document.body.addEventListener("mousemove", function () {
+            audio.play()
+        })
+
         window.requestAnimationFrame =
             window.__requestAnimationFrame ||
             window.requestAnimationFrame ||
